@@ -1,5 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <head><meta http-equiv="refresh" content="0; URL=../../3.5.1/manual/files/graph_viewer/viewer_js.js" /></head>
+    <head><meta http-equiv="refresh" content="0; URL=../../3.6.0/manual/files/graph_viewer/viewer_js.js" /></head>
     <body></body>
 </html>

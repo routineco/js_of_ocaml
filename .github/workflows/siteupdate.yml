@@ -54,7 +54,7 @@ jobs:
           cp -r toplevel $HOW_OUT/toplevel
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.0.0
+        uses: JamesIves/github-pages-deploy-action@4.2.1
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: _doc # The folder the action should deploy.

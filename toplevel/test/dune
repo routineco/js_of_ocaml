@@ -27,6 +27,8 @@
    +toplevel.js
    +dynlink.js
    %{dep:test_toplevel.bc}
+   --pretty
+   --enable use-js-string
    -o
    %{targets})))
 

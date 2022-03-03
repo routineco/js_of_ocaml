@@ -45,16 +45,8 @@ jobs:
 
       - name: Generate doc
         run: |
-          export HOW_DOC=doc
-          export HOW_CONFIG=how.json
-          export HOW_OUT=_doc
           eval $(opam env)
-          quickdop -f $HOW_DOC $HOW_OUT -t json -c $HOW_CONFIG -viu
-          HOW_LATEST=$(find $HOW_DOC -maxdepth 1 -type d -not -name $HOW_DOC -not -name dev -exec basename {} \; | sort -Vr | head -n 1)
-          export HOW_LATEST
-          ln -s $HOW_LATEST $HOW_OUT/latest
-          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; URL=latest/manual/overview" /></head><body></body></html>' > $HOW_OUT/index.html
-          cp -r toplevel $HOW_OUT/toplevel
+          ./build.sh
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.2.1

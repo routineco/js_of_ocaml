@@ -27,21 +27,22 @@ jobs:
           - 4.11.x
           - 4.12.x
           - 4.13.x
+          - 4.14.x
         skip-test:
           - true
         skip-doc:
           - true
         include:
           - os: ubuntu-latest
-            ocaml-compiler: 4.14.x
+            ocaml-compiler: ocaml-variants.5.0.0+trunk
             skip-test: false
             skip-doc: false
           - os: macos-latest
-            ocaml-compiler: 4.14.x
+            ocaml-compiler: ocaml-variants.5.0.0+trunk
             skip-test: false
             skip-doc: true
           - os: windows-latest
-            ocaml-compiler: 4.14.x
+            ocaml-compiler: ocaml-variants.5.0.0+trunk
             skip-test: false
             skip-doc: true
 
@@ -69,6 +70,9 @@ jobs:
           dune-cache: ${{ matrix.os == 'ubuntu-latest' }}
           opam-depext: ${{ !matrix.skip-test }}
           opam-depext-flags: --with-test
+          opam-repositories: |
+            alpha: https://github.com/kit-ty-kate/opam-alpha-repository.git
+            default: https://github.com/ocaml/opam-repository.git
 
       - run: opam install . --best-effort
         if: ${{ matrix.skip-test }}

@@ -90,7 +90,7 @@
    %{bin:js_of_ocaml}
    compile
    --pretty
-   --Werror
+   ;; --Werror
    --target-env
    browser
    -I

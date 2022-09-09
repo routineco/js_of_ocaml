@@ -13,8 +13,8 @@ bug-reports: "https://github.com/ocsigen/js_of_ocaml/issues"
 depends: [
   "dune" {>= "2.9"}
   "ocaml" {>= "4.04"}
-  "js_of_ocaml" {= version}
-  "js_of_ocaml-ppx" {= version}
+  "js_of_ocaml"
+  "js_of_ocaml-ppx"
   "lwt" {>= "2.4.4"}
   "num" {with-test}
   "ppx_expect" {>= "v0.14.2" & with-test}
